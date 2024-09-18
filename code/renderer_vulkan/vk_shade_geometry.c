@@ -170,6 +170,11 @@ VkRect2D get_scissor_rect(void)
         r.extent.width = backEnd.viewParms.viewportWidth;
 		r.extent.height = backEnd.viewParms.viewportHeight;
 
+		if (!r.extent.width && !r.extent.height) {
+			r.extent.width = width;
+			r.extent.height = height;
+		}
+
         // for draw model in setu manus       
         if (r.offset.x < 0)
 		    r.offset.x = 0;
