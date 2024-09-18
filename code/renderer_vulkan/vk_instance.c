@@ -246,7 +246,7 @@ static void vk_createInstance(void)
     instanceCreateInfo.enabledExtensionCount = nInsExt;
 	instanceCreateInfo.ppEnabledExtensionNames = ppInstanceExt;
 
-#ifndef NDEBUG
+#if 0
     ri.Printf(PRINT_ALL, "Using VK_LAYER_LUNARG_standard_validation\n");
 
     const char* const validation_layer_name = "VK_LAYER_LUNARG_standard_validation";    
