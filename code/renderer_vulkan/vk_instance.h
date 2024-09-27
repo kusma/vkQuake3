@@ -119,7 +119,7 @@ const char * cvtResToStr(VkResult result);
 #ifndef NDEDBG
 #define VK_CHECK(function_call) { \
 	VkResult result = function_call; \
-	if (result != VK_SUCCESS) \
+	if (result < 0) \
 		ri.Printf(PRINT_ALL, \
         "Vulkan: error %s returned by %s \n", cvtResToStr(result), #function_call); \
 }
